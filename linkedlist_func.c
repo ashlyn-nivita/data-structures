@@ -7,25 +7,28 @@ struct n
 };
 typedef struct n node;
  node *head,*first,*second,*third,*temp;
-int display(int);
+void display();
 int main()
 {
+    int n1,n2,n3,n4;
     head=(node*)malloc(sizeof(node));
     first=(node*)malloc(sizeof(node));
     second=(node*)malloc(sizeof(node));
     third=(node*)malloc(sizeof(node));
-    head->data=10;
+    scanf("%d%d%d%d",&n1,&n2,&n3,&n4);
+    head->data=n1;
     head->next=first;
-    first->data=20;
+    first->data=n2;
     first->next=second;
-    second->data=30;
+    second->data=n3;
     second->next=third;
-    third->data=40;
+    third->data=n4;
     third->next=NULL;
     temp=head;
-    display(head);
+    display();
+    return 0;
 }
-int display(int head)
+void display()
 {
     while(temp!=NULL)
     {
